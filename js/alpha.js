@@ -5,7 +5,8 @@ function handleKeyboard(event){
     const currentAlphabet = currentPress.innerText.toLowerCase();
 
     if(playerPress === currentAlphabet){
-        console.log('you got a point')
+        removeBackgroundcolorById(playerPress)
+        continueGame();
     }else{
         console.log('loser')
     }
