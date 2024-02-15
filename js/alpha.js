@@ -5,22 +5,31 @@ function handleKeyboard(event){
     const currentAlphabet = currentPress.innerText.toLowerCase();
 
     if(playerPress === currentAlphabet){
-        const currentScore = document.getElementById('currentScore');
-        const current = currentScore.innerText;
-        const currentScoreNumber = parseInt(current);
-        const newScore = currentScoreNumber + 1;
+        // let currentScore = document.getElementById('currentScore').innerText;
+        
+        // const currentScoreNumber = parseInt(currentScore);
+        // const newScore = currentScoreNumber + 1;
 
-        currentScore.innerText = newScore;
+        // currentScore = newScore;
+        // ------------------------------------------
+
+        const score = ScoreNumber('currentScore');
+        const newScore = score + 1 ;
+        updatedScore('currentScore',newScore)
 
         
         removeBackgroundcolorById(playerPress)
         continueGame();
     }else{
-        const currentLife = document.getElementById('current-life');
-        const curretLifeText = currentLife.innerText;
-        const currentLifeNumber = parseInt(curretLifeText);
-        const loseLife = currentLifeNumber - 1 ;
-        currentLife.innerText = loseLife;
+        // const currentLife = document.getElementById('current-life');
+        // const curretLifeText = currentLife.innerText;
+        // const currentLifeNumber = parseInt(curretLifeText);
+        // const loseLife = currentLifeNumber - 1 ;
+        // currentLife.innerText = loseLife;
+        // ----------------------------------------
+        const currentLife = ScoreNumber('current-life');
+        const loseLife = currentLife - 1;
+        updatedScore('current-life',loseLife)
     }
 }
 

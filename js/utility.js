@@ -18,6 +18,19 @@ function removeBackgroundcolorById(elementId){
 }
 
 
+function ScoreNumber(elementId){
+    const element = document.getElementById(elementId);
+    const elementText = element.innerText;
+
+    const elementNumber = parseInt(elementText);
+    return elementNumber;
+}
+
+
+function updatedScore(elementId , value){
+    document.getElementById(elementId).innerText = value;
+}
+
 function getRandomAlphabet(){
     const alphaString = 'abcdefghijklmnopqrstuvwxyz';
     const alpha = alphaString.split('');
