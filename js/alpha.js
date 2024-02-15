@@ -5,10 +5,22 @@ function handleKeyboard(event){
     const currentAlphabet = currentPress.innerText.toLowerCase();
 
     if(playerPress === currentAlphabet){
+        const currentScore = document.getElementById('currentScore');
+        const current = currentScore.innerText;
+        const currentScoreNumber = parseInt(current);
+        const newScore = currentScoreNumber + 1;
+
+        currentScore.innerText = newScore;
+
+        
         removeBackgroundcolorById(playerPress)
         continueGame();
     }else{
-        console.log('loser')
+        const currentLife = document.getElementById('current-life');
+        const curretLifeText = currentLife.innerText;
+        const currentLifeNumber = parseInt(curretLifeText);
+        const loseLife = currentLifeNumber - 1 ;
+        currentLife.innerText = loseLife;
     }
 }
 
