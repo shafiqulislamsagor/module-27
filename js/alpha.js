@@ -30,6 +30,9 @@ function handleKeyboard(event){
         const currentLife = ScoreNumber('current-life');
         const loseLife = currentLife - 1;
         updatedScore('current-life',loseLife)
+        if(loseLife === 0){
+            gameOver()
+        }
     }
 }
 
@@ -52,4 +55,16 @@ function play(){
     // playgroundSection.classList.remove('hidden')
     showElement('play-ground');
     continueGame();
+}
+
+function gameOver(){
+    hideElement('play-ground');
+    showElement('scoreEnd')
+}
+
+function playAgain(){
+    showElement('play-ground');
+    hideElement('scoreEnd');
+    updatedScore('current-life',5);
+    updatedScore('currentScore',0)
 }
