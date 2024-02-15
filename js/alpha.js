@@ -1,5 +1,14 @@
-function handleKeyboard(){
-    console.log('key press')
+function handleKeyboard(event){
+    const playerPress = event.key;
+
+    const currentPress = document.getElementById('current');
+    const currentAlphabet = currentPress.innerText.toLowerCase();
+
+    if(playerPress === currentAlphabet){
+        console.log('you got a point')
+    }else{
+        console.log('loser')
+    }
 }
 
 document.addEventListener('keyup' , handleKeyboard)
