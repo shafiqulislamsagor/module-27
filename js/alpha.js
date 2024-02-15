@@ -1,3 +1,9 @@
+function handleKeyboard(){
+    console.log('key press')
+}
+
+document.addEventListener('keyup' , handleKeyboard)
+
 function continueGame(){
     const alphabet = getRandomAlphabet();
     
