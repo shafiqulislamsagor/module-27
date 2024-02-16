@@ -59,7 +59,12 @@ function play(){
 
 function gameOver(){
     hideElement('play-ground');
-    showElement('scoreEnd')
+    showElement('scoreEnd');
+    const lastScore = ScoreNumber('currentScore');
+    updatedScore('total',lastScore);
+
+    const currentAlphabet = setTextId('current');
+    removeBackgroundcolorById(currentAlphabet);
 }
 
 function playAgain(){

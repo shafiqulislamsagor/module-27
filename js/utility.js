@@ -26,6 +26,11 @@ function ScoreNumber(elementId){
     return elementNumber;
 }
 
+function setTextId(element){
+    const elements = document.getElementById(element);
+    const text = elements.innerText;
+    return text
+}
 
 function updatedScore(elementId , value){
     document.getElementById(elementId).innerText = value;
